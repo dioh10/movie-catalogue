@@ -1,0 +1,9 @@
+<section class="movie-catalogue-container">
+  <app-movie-details [selectedMovie]="selectedMovie"></app-movie-details>
+  <app-movie-list
+    [movieListData]="movieListData"
+    (movieItemSelectedEvent)="onMovieSelected($event)"
+  >
+    <!--The problem was the input, it wasn't listening to the event-->
+  </app-movie-list>
+</section>
